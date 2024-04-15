@@ -16,3 +16,7 @@ Content-Type: application/json
     "name": "Diego Fernandes",
     "email": "diego@rockeseat.com.br"
 }
+
+###
+
+GET http://localhost:3333/events/18d40bf9-b90a-4dc3-a1fd-1748467cdf30
