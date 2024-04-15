@@ -2,7 +2,7 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title": "Novo Evento 2",
+    "title": "Novo evento",
     "details": null,
     "maximumAttendees": 1
 }
@@ -13,8 +13,8 @@ POST http://localhost:3333/events/18d40bf9-b90a-4dc3-a1fd-1748467cdf30/attendees
 Content-Type: application/json
 
 {
-    "name": "Diego Fernandes",
-    "email": "diego@rockeseat.com.br"
+    "name": "Carlos Rodrigues",
+    "email": "carlos@rockeseat.com.br"
 }
 
 ###
