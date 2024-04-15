@@ -33,7 +33,7 @@ export async function createEvent(app: FastifyInstance) {
         },
       });
 
-      if (!eventWithSameSlug !== null) {
+      if (eventWithSameSlug !== null) {
         throw new Error("Another event with same title already exists.");
       }
 
