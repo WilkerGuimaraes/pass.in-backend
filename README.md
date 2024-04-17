@@ -13,13 +13,13 @@ O pass.in é uma aplicação de **gestão de participantes de eventos presenciai
 - [ ✔ ] O organizador deve poder visualizar a lista de participantes;
 - [ ✔ ] O participante deve poder se inscrever em um evento;
 - [ ✔ ] O participante de poder visualizar seu crachá de inscrição;
-- [ ✔ ] O participante de poder realizar ckeck-in no evento;
+- [ ✔ ] O participante de poder realizar check-in no evento;
 
 ### Regras de negócio
 
 - [ ✔ ] O participante só pode se inscrever em um evento uma única vez;
-- [ ✔ ] O participante só pode se inscrever um eventos com vagas disponíveis;
-- [ ✔ ] O participante só pode só pode realizar ckeck-in em um evento uma única vez;
+- [ ✔ ] O participante só pode se inscrever em eventos com vagas disponíveis;
+- [ ✔ ] O participante só pode só pode realizar check-in em um evento uma única vez;
 
 ### Requisitos não-funcionais
 
@@ -40,7 +40,11 @@ Este projeto aborda o uso de algumas ferramentas de desenvolvimento back-end uti
 
 ## 💻 Executando
 
-- Após clonar o repositório, acesse a pasta do projeto e execute o seguinte comando para instalar todas as dependências:
+- Após clonar o repositório, crie um arquivo na raiz do seu projeto chamado `.env`. Este arquivo será usado para realizar a conexão com o banco de dados. Dentro deste arquivo `.env`, adicione a seguinte linha de código:
+
+![env-file](https://imgur.com/ZnYtJyQ.png)
+
+- Após isso, acesse a pasta do projeto e execute o seguinte comando para instalar todas as dependências:
 
 ```
 
@@ -48,25 +52,15 @@ npm install
 
 ```
 
-- Após isso, execute o seguinte comando para iniciar o prisma:
+- Em seguida, execute o seguinte comando para alimentar o banco de dados com dados fictícios apenas para fins de teste:
 
 ```
 
-npx prisma init
+npx prisma db seed
 
 ```
 
-Na pasta `prisma`, irá conter um arquivo com o nome de `schema.prisma`. Por padrão, este arquivo vem com esta configuração:
-
-![prisma-code](https://imgur.com/7xc0sIX.png)
-
-Você precisa garantir que os dados estejam assim:
-
-![prisma-code2](https://imgur.com/YIzC7qn.png)
-
-Com esta configuração, você informa ao prisma que o banco de dados ao qual ele vai se conectar é o sqlite. E também, este código contém a estrutura das tabelas de eventos, participantes e de check-in que será criada no banco de dados.
-
-- Depois de verificar se as configurações estão corretas, execute no terminal o seguinte script para rodar o servidor:
+- E por fim, execute este script para executar a aplicação:
 
 ```
 
@@ -74,17 +68,9 @@ npm run dev
 
 ```
 
-- E por fim, execute este script para que o prisma realize a conexão com o sqlite.
-
-```
-
-npm run db:migrate
-
-```
-
 O servidor estará rodando na porta `3333` do seu navegador:`http://localhost:3333`
 
-Para ver esta API funcionando é recomendável utilizar a documentação disponível no swagger fornecido pelo fastify. Assim que a aplicação estiver rodando, acesse o diretório `/docs` para ter acesso.
+Para testar esta aplicação é recomendável utilizar a documentação `swagger`. Lá encontram-se todas as rotas e suas informação para utilizá-las. Para acessar esta documentação, acesse o seguinte link após executar o comando para executar esta aplicação: http://localhost:3333/docs
 
 Uma alternativa ao swagger seria usar o arquivo `api.http` localizado para pasta raiz do projeto. Neste arquivo contém todas as requisições desta API, para utilizá-las é necessário baixar a extensão do VSCode chamada `Rest Client`:
 
