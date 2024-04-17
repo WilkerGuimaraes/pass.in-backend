@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 import { prisma } from "../src/lib/prisma";
 
 async function seed() {
-  const eventId = "9e9bd979-9d10-4915-b339-3786b1634f33";
+  const eventId = "9d808126-1cdc-43cc-ac17-973e69afff97";
 
   await prisma.event.deleteMany();
 
