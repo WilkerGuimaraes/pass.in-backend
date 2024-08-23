@@ -12,8 +12,8 @@ O pass.in é uma aplicação de **gestão de participantes de eventos presenciai
 - [ ✔ ] O organizador deve poder visualizar dados de um evento;
 - [ ✔ ] O organizador deve poder visualizar a lista de participantes;
 - [ ✔ ] O participante deve poder se inscrever em um evento;
-- [ ✔ ] O participante de poder visualizar seu crachá de inscrição;
-- [ ✔ ] O participante de poder realizar check-in no evento;
+- [ ✔ ] O participante deve poder visualizar seu crachá de inscrição;
+- [ ✔ ] O participante deve poder realizar check-in no evento;
 
 ### Regras de negócio
 
